@@ -1,0 +1,32 @@
+
+DETAILS:
+
+{{model.title}} <br/>
+Contenu : {{model.body}}
+
+<br/>
+
+Commentaires:
+<ul>
+  {{#each model.comments as |comment|}}
+     <li>
+       {{comment.body}}
+     </li>
+  {{/each}}
+</ul>
+
+<br/>
+
+<form>
+  <fieldset>
+    <legend>Ajouter un commentaire</legend>
+
+    <label for="content"> Contenu: </label>
+    {{input type="text" value=commentContent}}
+
+
+    <button {{action "addComment" model.id commentContent}}>Envoyer</button>
+  </fieldset>
+</form>
+
+{{outlet}}

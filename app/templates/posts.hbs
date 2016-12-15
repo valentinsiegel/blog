@@ -1,0 +1,12 @@
+<h1>Liste des posts:</h1>
+
+
+<ul>
+{{#each model as |entry|}}
+  {{!--<li><h3>{{#link-to "posts.details" entry}}Titre : {{entry.title}} {{/link-to}}</h3></li>
+  <button {{action "deletePost" entry}}>Delete></button>
+  <div>{{entry.body}}</div>--}}
+  {{ blog-post article=entry}}
+{{/each}}
+</ul>
+{{outlet}}

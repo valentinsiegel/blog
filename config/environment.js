@@ -1,7 +1,17 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+
   var ENV = {
+
+        // Initialize Firebase
+    firebase:{
+       apiKey: "AIzaSyDtkIkr1L9img6FHXjpbcIJ4KOwbAskxQ4",
+       authDomain: "blog-5c6a7.firebaseapp.com",
+      databaseURL: "https://blog-5c6a7.firebaseio.com",
+      storageBucket: "blog-5c6a7.appspot.com",
+      messagingSenderId: "186847761391"
+    },
     modulePrefix: 'blog',
     environment: environment,
     rootURL: '/',

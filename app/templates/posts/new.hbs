@@ -1,0 +1,12 @@
+<form>
+    <fieldset>
+        <legend>Ajouter un nouvel article</legend>
+            <label for="title">Titre :</label>
+            {{input type="text" value=title}}
+            
+            <label for="content">Contenu :</label>
+            {{input type="text" value=content}}
+
+            <button {{action "createPost" title content}}>Envoyer</button>
+    </fieldset> 
+</form>

@@ -1,0 +1,10 @@
+<li>
+  id : {{article.id}}
+  title : {{ article.title }} {{#link-to "posts.details" article}}Details{{/link-to}}
+  <a href="#" {{action "showArticle" article}}> Voir</a>
+  <a href="#" {{action "deletePost" article}}> Supprimer</a>
+
+  {{#if article.isShowingArticle}}
+    {{ article.body }}
+  {{/if}}
+</li>
